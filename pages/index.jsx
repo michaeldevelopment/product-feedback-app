@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import FeedbackMapContainer from "../components/FeedbackMapContainer";
 import SortSection from "../components/SortSection";
 import NavMobile from "../components/NavMobile";
+import NoFeedbackSection from "../components/NoFeedbackSection";
 
 const BOOKS_QUERY = gql`
   query getAllBooks {
@@ -90,7 +91,11 @@ export default function Home({ feedbackItems }) {
     <>
       <NavMobile />
       <SortSection />
-      <FeedbackMapContainer feedbackItems={feedbackItems} />
+      {feedbackItems.length ? (
+        <FeedbackMapContainer feedbackItems={feedbackItems} />
+      ) : (
+        <NoFeedbackSection />
+      )}
     </>
   );
 }
