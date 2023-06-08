@@ -101,7 +101,7 @@ export default function Home({ feedbackItems }) {
 }
 
 export async function getServerSideProps() {
-  // const { data, loading } = await client.query({
+  // const { data: feedbackItems, loading } = await client.query({
   //   query: BOOKS_QUERY,
   // });
   const feedbackItems = await fetch(
