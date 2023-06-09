@@ -89,8 +89,8 @@ const DELETE_ALL_BOOKS_MUTATION = gql`
 export default function Home({ feedbackItems }) {
   return (
     <>
-      <NavMobile />
-      <SortSection />
+      <NavMobile  />
+      <SortSection feedbackItemsLength={feedbackItems.length} />
       {feedbackItems.length ? (
         <FeedbackMapContainer feedbackItems={feedbackItems} />
       ) : (
