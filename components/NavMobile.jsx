@@ -1,5 +1,6 @@
 import React from "react";
 import { StyledNavMobile } from "../styled-components/StyledNavMobile";
+import HamburguerMenu from "./HamburguerMenu";
 
 const NavMobile = () => {
   return (
@@ -7,7 +8,7 @@ const NavMobile = () => {
       <section>
         <h3>Frontend Mentor </h3> <p> Feedback Board</p>
       </section>
-      <div> Hamb Menu</div>
+      <HamburguerMenu />
     </StyledNavMobile>
   );
 };

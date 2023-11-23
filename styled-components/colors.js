@@ -6,7 +6,8 @@ const colors = {
   silver: "#f7f8fd",
   gray: "#647196",
   orange: "#f49f85",
-  clearBlue: "#g2bcfa",
+  clearBlue: "#62bcfa",
+  white: "#fff",
 };
 
 export default colors;

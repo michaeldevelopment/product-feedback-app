@@ -6,7 +6,12 @@ export const StyledCategoryButton = styled.button`
   color: ${colors.electricBlue};
   background-color: ${colors.backgrGray};
   border-radius: 10px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: bold;
   border: none;
+
+  &.active {
+    background: ${colors.electricBlue};
+    color: ${colors.white};
+  }
 `;

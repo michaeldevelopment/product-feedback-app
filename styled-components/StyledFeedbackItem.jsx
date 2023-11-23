@@ -10,4 +10,8 @@ export const StyledFeedbackItem = styled.article`
   h3 {
     margin: 0;
   }
+
+  p {
+    opacity: 0.7;
+  }
 `;
