@@ -1,13 +1,10 @@
 import styled from "styled-components";
 import colors from "./colors";
 
-export const StyledNavMobileMenu = styled.section.attrs((props) => ({
-  className: props.className,
-}))`
-  position: absolute;
+export const StyledNavMobileMenu = styled.section`
+  position: fixed;
   top: 85px;
   right: 0px;
-  height: 100%;
   z-index: 1;
   background: ${colors.backgrGray};
   transition: all 0.5s;
@@ -15,6 +12,7 @@ export const StyledNavMobileMenu = styled.section.attrs((props) => ({
   display: flex;
   flex-direction: column;
   gap: 5px;
+  height: 100%;
 
   &.expanded {
     right: 50px

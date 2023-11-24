@@ -26,8 +26,8 @@ const CreateFeedbackContainer = () => {
   return (
     <StyledCreateFeedbackContainer>
       <h2> Create New Feedback </h2>
-      {feedbackOptions.map((feedbackOptions) => (
-        <InputForm {...feedbackOptions}></InputForm>
+      {feedbackOptions.map((feedbackOptions, index) => (
+        <InputForm key={index} {...feedbackOptions}></InputForm>
       ))}
     </StyledCreateFeedbackContainer>
   );

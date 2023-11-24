@@ -10,15 +10,15 @@ export const StyledHamburguerMenu = styled.button`
   background: transparent;
   cursor: pointer;
 
-  &:active div:first-child {
+  &.active div:first-child {
     transform: rotate(45deg);
   }
 
-  &:active div:nth-child(2) {
+  &.active div:nth-child(2) {
     opacity: 0;
   }
 
-  &:active div:last-child {
+  &.active div:last-child {
     transform: rotate(-45deg);
   }
 

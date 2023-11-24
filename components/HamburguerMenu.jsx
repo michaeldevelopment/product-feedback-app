@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { StyledHamburguerMenu } from "../styled-components/StyledHamburguerMenu";
 import { StyledNavMobileMenu } from "../styled-components/StyledNavMobileMenu";
 import { StyledFeedbackItem } from "../styled-components/StyledFeedbackItem";
@@ -30,7 +30,7 @@ const NavMobileMenu = ({ showNavMenu }) => {
     >
       <StyledFeedbackItem>
         {allCategories.map((category) => (
-          <CategoryButton text={category} />
+          <CategoryButton key={category} text={category} />
         ))}
       </StyledFeedbackItem>
       <StyledFeedbackItem>
@@ -39,8 +39,8 @@ const NavMobileMenu = ({ showNavMenu }) => {
           <a> View </a>
         </div>
         <ul>
-          {roadmapCategories.map(({ roadmapCategory, color }) => (
-            <li>
+          {roadmapCategories.map(({ roadmapCategory, color }, index) => (
+            <li key={index}>
               <div>
                 <StyledCircle color={color} />
                 {roadmapCategory}
@@ -56,9 +56,31 @@ const NavMobileMenu = ({ showNavMenu }) => {
 
 const HamburguerMenu = () => {
   const [showNavMenu, setShowNavMenu] = useState(false);
+  const hamburguerMenuRef = useRef(null);
+
+  useEffect(() => {
+    const clickEventFunction = () => {
+      setShowNavMenu(!showNavMenu);
+      !showNavMenu
+        ? (document.body.style.overflowY = "hidden")
+        : (document.body.style = null);
+    };
+
+    hamburguerMenuRef.current.addEventListener("click", clickEventFunction);
+
+    return () =>
+      hamburguerMenuRef.current.removeEventListener(
+        "click",
+        clickEventFunction
+      );
+  }, [showNavMenu]);
+
   return (
     <>
-      <StyledHamburguerMenu onClick={() => setShowNavMenu(!showNavMenu)}>
+      <StyledHamburguerMenu
+        {...(showNavMenu && { className: "active" })}
+        ref={hamburguerMenuRef}
+      >
         {Array.from({ length: 3 }, (v, i) => i).map((_, index) => (
           <div key={index}></div>
         ))}

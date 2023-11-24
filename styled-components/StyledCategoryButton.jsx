@@ -9,6 +9,7 @@ export const StyledCategoryButton = styled.button`
   text-transform: capitalize;
   font-weight: bold;
   border: none;
+  cursor: pointer;
 
   &.active {
     background: ${colors.electricBlue};

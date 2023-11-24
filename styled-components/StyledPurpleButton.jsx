@@ -8,4 +8,5 @@ export const StyledPurpleButton = styled.button`
   border-radius: 10px;
   font-weight: bold;
   border: none;
+  cursor: pointer;
 `;
