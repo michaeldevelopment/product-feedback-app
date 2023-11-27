@@ -9,6 +9,8 @@ export const StyledCTAButton = styled.button`
   font-weight: bold;
   border: none;
   cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
 
   &:hover {
     opacity: 0.7;

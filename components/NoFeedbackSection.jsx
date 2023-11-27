@@ -2,7 +2,6 @@ import React from "react";
 import { StyledNoFeedbackSection } from "../styled-components/StyledNoFeedbackSection";
 import NoFeedbackImage from "../svgElements/NoFeedbackImage";
 import CTAButton from "./CTAButton";
-import Link from "next/link";
 
 const NoFeedbackSection = () => {
   return (
@@ -13,8 +12,8 @@ const NoFeedbackSection = () => {
         Got a suggestion? Found a bug that needs to be squeashed? We love
         hearing about new ideas to improve our app.
       </p>
-      <CTAButton backgroundColor="purple">
-        <Link href="/create-feedback">+ Add Feedback</Link>
+      <CTAButton backgroundColor="purple" url="/create-feedback">
+        + Add Feedback
       </CTAButton>
     </StyledNoFeedbackSection>
   );

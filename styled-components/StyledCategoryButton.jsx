@@ -3,6 +3,7 @@ import colors from "./colors";
 
 export const StyledCategoryButton = styled.button`
   padding: 10px 15px;
+  margin: 10px 0px;
   color: ${colors.electricBlue};
   background-color: ${colors.backgrGray};
   border-radius: 10px;

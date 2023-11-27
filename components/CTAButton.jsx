@@ -1,11 +1,14 @@
 import React from "react";
 import { StyledCTAButton } from "../styled-components/StyledCTAButton";
+import Link from "next/link";
 
-const CTAButton = ({ children, backgroundColor }) => {
+const CTAButton = ({ children, backgroundColor, url }) => {
   return (
-    <StyledCTAButton $backgroundColor={backgroundColor}>
-      {children}
-    </StyledCTAButton>
+    <Link href={`${url}`} passHref>
+      <StyledCTAButton $backgroundColor={backgroundColor}>
+        {children}
+      </StyledCTAButton>
+    </Link>
   );
 };
 

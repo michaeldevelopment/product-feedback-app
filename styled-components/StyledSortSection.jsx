@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import colors from "./colors";
-import deviceSize from "./breakpoints"
+import deviceSize from "./breakpoints";
 
 export const StyledSortSection = styled.section`
   display: flex;
@@ -18,7 +18,7 @@ export const StyledSortSection = styled.section`
     font-weight: bold;
   }
 
-  button: first-child {
+  button.votes {
     border: none;
     background: none;
     color: #fff;

@@ -32,8 +32,12 @@ const CreateFeedbackContainer = () => {
       {feedbackOptions.map((feedbackOptions, index) => (
         <InputForm key={index} {...feedbackOptions} />
       ))}
-      <CTAButton backgroundColor="purple"> Add feedback </CTAButton>
-      <CTAButton backgroundColor="darkGray"> Cancel </CTAButton>
+      <CTAButton backgroundColor="purple" url="/">
+        Add feedback
+      </CTAButton>
+      <CTAButton backgroundColor="darkGray" url="/">
+        Cancel
+      </CTAButton>
     </StyledCreateEditContainer>
   );
 };

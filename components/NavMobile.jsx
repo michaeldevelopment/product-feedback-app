@@ -8,7 +8,7 @@ const NavMobile = () => {
       <section>
         <h3>Frontend Mentor </h3> <p> Feedback Board</p>
       </section>
-      <HamburguerMenu />
+      {/* <HamburguerMenu /> */}
     </StyledNavMobile>
   );
 };

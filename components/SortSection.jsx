@@ -2,7 +2,6 @@ import React from "react";
 import { StyledSortSection } from "../styled-components/StyledSortSection";
 import SuggestionsIcon from "../svgElements/SuggestionsIcon";
 import CTAButton from "./CTAButton";
-import Link from "next/link";
 
 const SortSection = ({ feedbackItemsLength }) => {
   return (
@@ -11,10 +10,10 @@ const SortSection = ({ feedbackItemsLength }) => {
         <SuggestionsIcon /> {feedbackItemsLength} suggestions
       </span>
       <span>
-        Sort by: <button> Most Upvotes </button>
+        Sort by: <button className="votes"> Most Upvotes </button>
       </span>
-      <CTAButton backgroundColor="purple">
-        <Link href="/create-feedback">+ Add Feedback</Link>
+      <CTAButton backgroundColor="purple" url="/create-feedback">
+        + Add Feedback
       </CTAButton>
     </StyledSortSection>
   );
