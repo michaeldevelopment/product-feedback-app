@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-export const StyledCreateFeedbackContainer = styled.section`
+export const StyledCreateEditContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -8,4 +8,8 @@ export const StyledCreateFeedbackContainer = styled.section`
   background-color: white;
   padding: 30px;
   border-radius: 15px;
+
+  svg {
+    margin-top: -55px;
+  }
 `;

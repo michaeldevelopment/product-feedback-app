@@ -11,7 +11,7 @@ const FeedbackMapContainer = ({ feedbackItems = [] }) => {
           <StyledFeedbackItem key={item.id}>
             <h3> {item.title} </h3>
             <p> {item.description} </p>
-            <CategoryButton text={item.category} />
+            <CategoryButton> {item.category} </CategoryButton>
           </StyledFeedbackItem>
         );
       })}

@@ -30,7 +30,7 @@ const NavMobileMenu = ({ showNavMenu }) => {
     >
       <StyledFeedbackItem>
         {allCategories.map((category) => (
-          <CategoryButton key={category} text={category} />
+          <CategoryButton key={category}> {category} </CategoryButton>
         ))}
       </StyledFeedbackItem>
       <StyledFeedbackItem>

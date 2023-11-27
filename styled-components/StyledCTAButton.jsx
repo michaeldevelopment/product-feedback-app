@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import colors from "./colors";
 
-export const StyledPurpleButton = styled.button`
+export const StyledCTAButton = styled.button`
   padding: 10px 15px;
+  background: ${(props) => colors[props.$backgroundColor]};
   color: #fff;
-  background-color: ${colors.purple};
   border-radius: 10px;
   font-weight: bold;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 `;

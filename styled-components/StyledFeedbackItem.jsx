@@ -6,12 +6,4 @@ export const StyledFeedbackItem = styled.article`
   background: #fff;
   padding: 20px;
   border-radius: 15px;
-
-  h3 {
-    margin: 0;
-  }
-
-  p {
-    opacity: 0.7;
-  }
 `;

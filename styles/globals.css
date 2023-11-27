@@ -17,6 +17,16 @@ a {
   box-sizing: border-box;
 }
 
+
+h3 {
+  margin: 0;
+}
+
+p {
+  opacity: 0.6;
+  margin: 5px 0px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

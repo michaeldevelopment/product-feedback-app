@@ -2,7 +2,7 @@ import React from "react";
 import { StyledCreateEditContainer } from "../styled-components/StyledCreateEditContainer";
 import InputForm from "./InputForm";
 import CTAButton from "./CTAButton";
-import NewFeedbackIcon from "../svgElements/NewFeedbackIcon";
+import EditFeedbackIcon from "../svgElements/EditFeedbackIcon";
 
 const feedbackOptions = [
   {
@@ -17,6 +17,12 @@ const feedbackOptions = [
     selectOptions: ["All", "UI", "UX", "Enhancement", "Bug", "Feature"],
   },
   {
+    title: "Update Status",
+    description: "Change feature state",
+    type: "select",
+    selectOptions: ["Planned, In-progress, Live"],
+  },
+  {
     title: "Feedback Detail",
     description:
       "Include any specific comments on what should be improved, added, etc.",
@@ -24,18 +30,19 @@ const feedbackOptions = [
   },
 ];
 
-const CreateFeedbackContainer = () => {
+const EditFeedbackContainer = () => {
   return (
     <StyledCreateEditContainer>
-      <NewFeedbackIcon />
-      <h2> Create New Feedback </h2>
+      <EditFeedbackIcon />
+      <h2> Editing .. </h2>
       {feedbackOptions.map((feedbackOptions, index) => (
         <InputForm key={index} {...feedbackOptions} />
       ))}
-      <CTAButton backgroundColor="purple"> Add feedback </CTAButton>
+      <CTAButton backgroundColor="purple"> Save feedback </CTAButton>
       <CTAButton backgroundColor="darkGray"> Cancel </CTAButton>
+      <CTAButton backgroundColor="red"> Delete </CTAButton>
     </StyledCreateEditContainer>
   );
 };
 
-export default CreateFeedbackContainer;
+export default EditFeedbackContainer;

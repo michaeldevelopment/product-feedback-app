@@ -1,4 +1,9 @@
 import React from "react";
+import {
+  StyledInputText,
+  StyledInputTextArea,
+  StyledSelect,
+} from "../styled-components/StyledInput";
 
 const InputForm = ({ type, title, description, selectOptions }) => {
   let inputHTMLContainer;
@@ -6,18 +11,18 @@ const InputForm = ({ type, title, description, selectOptions }) => {
   switch (type) {
     case "select":
       inputHTMLContainer = (
-        <select>
-          {selectOptions.map((option) => (
+        <StyledSelect>
+          {selectOptions?.map((option) => (
             <option key={option}> {option} </option>
           ))}
-        </select>
+        </StyledSelect>
       );
       break;
-    case "text":
-      inputHTMLContainer = <input type={type} />;
-      break;
     case "textarea":
-      inputHTMLContainer = <input type={type} />;
+      inputHTMLContainer = <StyledInputTextArea type={type} />;
+      break;
+    case "text":
+      inputHTMLContainer = <StyledInputText type={type} />;
       break;
   }
 
